@@ -1,0 +1,14 @@
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
+        hm = {}
+        hp = {}
+        for i in s:
+            hm[i] = hm.get(i,0)+1
+        
+        for i in t:
+            hp[i] = hp.get(i,0)+1
+        
+        if hm==hp:
+            return True
+        else:
+            return False
